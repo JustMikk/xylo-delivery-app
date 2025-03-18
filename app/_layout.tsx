@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import "../app/globals.css";
+import "./globals.css";
 
 export default function Layout() {
   return (
@@ -7,10 +7,13 @@ export default function Layout() {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="screens/splash1"
     >
+      <Stack.Screen name="index" />
       <Stack.Screen name="screens/splash1" />
       <Stack.Screen name="screens/splash2" />
+      <Stack.Screen name="screens/onboarding1" />
+      <Stack.Screen name="screens/onboarding2" />
+      <Stack.Screen name="screens/onboarding3" />
       <Stack.Screen name="(tabs)" />
     </Stack>
   );
