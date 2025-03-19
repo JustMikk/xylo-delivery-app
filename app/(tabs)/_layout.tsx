@@ -7,12 +7,22 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#FF6F00', // primary color
-        tabBarInactiveTintColor: '#252525', // light color
+        tabBarActiveTintColor: '#fff',
+        tabBarInactiveTintColor: '#fff',
         tabBarStyle: {
-          backgroundColor: '#fff',
-          borderTopWidth: 1,
-          borderTopColor: '#E8E8E8', // secondary color
+          backgroundColor: '#FF6B00',
+          borderTopWidth: 0,
+          height: 65,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+        },
+        tabBarItemStyle: {
+          marginTop: 5,
+          marginBottom: 5,
         },
       }}
     >
@@ -20,11 +30,15 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
-            className='text'
               source={icons.home}
-              style={{ width: 24, height: 24, tintColor: color }}
+              style={{ 
+                width: 24, 
+                height: 24, 
+                tintColor: '#fff',
+                opacity: focused ? 1 : 0.5
+              }}
             />
           ),
         }}
@@ -33,10 +47,15 @@ export default function TabLayout() {
         name="menu"
         options={{
           title: 'Menu',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={icons.menu}
-              style={{ width: 24, height: 24, tintColor: color }}
+              style={{ 
+                width: 24, 
+                height: 24, 
+                tintColor: '#fff',
+                opacity: focused ? 1 : 0.5
+              }}
             />
           ),
         }}
@@ -45,10 +64,15 @@ export default function TabLayout() {
         name="favourites"
         options={{
           title: 'Favourites',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={icons.favourites}
-              style={{ width: 24, height: 24, tintColor: color }}
+              style={{ 
+                width: 24, 
+                height: 24, 
+                tintColor: '#fff',
+                opacity: focused ? 1 : 0.5
+              }}
             />
           ),
         }}
@@ -57,10 +81,15 @@ export default function TabLayout() {
         name="my_orders"
         options={{
           title: 'My Orders',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={icons.myOrders}
-              style={{ width: 24, height: 24, tintColor: color }}
+              style={{ 
+                width: 24, 
+                height: 24, 
+                tintColor: '#fff',
+                opacity: focused ? 1 : 0.5
+              }}
             />
           ),
         }}
@@ -69,10 +98,15 @@ export default function TabLayout() {
         name="help"
         options={{
           title: 'Help',
-          tabBarIcon: ({ color }) => (
+          tabBarIcon: ({ focused }) => (
             <Image
               source={icons.help}
-              style={{ width: 24, height: 24, tintColor: color }}
+              style={{ 
+                width: 24, 
+                height: 24, 
+                tintColor: '#fff',
+                opacity: focused ? 1 : 0.5
+              }}
             />
           ),
         }}
