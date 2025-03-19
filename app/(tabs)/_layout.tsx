@@ -22,6 +22,7 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color }) => (
             <Image
+            className='text'
               source={icons.home}
               style={{ width: 24, height: 24, tintColor: color }}
             />
