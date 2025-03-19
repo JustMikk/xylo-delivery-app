@@ -1,10 +1,16 @@
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useState } from 'react';
 import { icons } from '../../constants/icons';
 import { images } from '../../constants/images';
+import NotificationSlider from '../components/NotificationSlider';
+import ProfileSlider from '../components/ProfileSlider';
 
 export default function HomeScreen() {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Search and Icons Header */}
@@ -15,17 +21,23 @@ export default function HomeScreen() {
             className="flex-1 text-base ml-2"
           />
           <TouchableOpacity>
-            <Image source={icons.search} className="w-9 h-9 opacity-50" />
+            <Image source={icons.filter} className="w-9 h-9 opacity-50" />
           </TouchableOpacity>
         </View>
         <TouchableOpacity>
           <Image source={icons.cart} className="w-9 h-9" />
         </TouchableOpacity>
-        <TouchableOpacity className="ml-5">
+        <TouchableOpacity 
+          className="ml-5"
+          onPress={() => setShowNotifications(true)}
+        >
           <Image source={icons.notification} className="w-9 h-9" />
         </TouchableOpacity>
-        <TouchableOpacity className="ml-5">
-          <Image source={icons.profile} className="w-9 h-9" />
+        <TouchableOpacity 
+          className="ml-5"
+          onPress={() => setShowProfile(true)}
+        >
+          <Image source={icons.profile_1} className="w-9 h-9" />
         </TouchableOpacity>
       </View>
 
@@ -127,6 +139,16 @@ export default function HomeScreen() {
           </View>
         </View>
       </ScrollView>
+
+      <NotificationSlider 
+        isVisible={showNotifications}
+        onClose={() => setShowNotifications(false)}
+      />
+
+      <ProfileSlider 
+        isVisible={showProfile}
+        onClose={() => setShowProfile(false)}
+      />
     </SafeAreaView>
   );
 }
