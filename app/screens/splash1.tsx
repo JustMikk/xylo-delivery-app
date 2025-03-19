@@ -6,7 +6,7 @@ import { images } from '../../constants/images';
 export default function Splash1() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace('/screens/splash2');
+      router.replace('/screens/onboarding1');
     }, 2000);
 
     return () => clearTimeout(timer);

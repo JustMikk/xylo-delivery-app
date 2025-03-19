@@ -7,7 +7,7 @@ export default function Onboarding2() {
     <View className="flex-1 bg-white">
       <TouchableOpacity 
         className="absolute right-5 top-12 z-10"
-        onPress={() => router.replace('/(tabs)')}
+        onPress={() => router.replace('/screens/splash2')}
       >
         <Text className="text-primary font-semibold">Skip</Text>
       </TouchableOpacity>

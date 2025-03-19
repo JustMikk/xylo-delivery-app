@@ -16,14 +16,14 @@ export default function Splash2() {
       <View className="w-full space-y-4">
         <TouchableOpacity 
           className="w-full bg-primary py-4 rounded-lg items-center"
-          onPress={() => router.replace('/screens/onboarding1')}
+          onPress={() => router.push('/screens/auth/login')}
         >
           <Text className="text-white text-base font-semibold">Sign In</Text>
         </TouchableOpacity>
         
         <TouchableOpacity 
           className="w-full bg-accent py-4 rounded-lg items-center"
-          onPress={() => router.replace('/screens/onboarding1')}
+          onPress={() => router.push('/screens/auth/signup')}
         >
           <Text className="text-primary text-base font-semibold">Sign Up</Text>
         </TouchableOpacity>

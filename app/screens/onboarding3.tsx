@@ -27,7 +27,7 @@ export default function Onboarding3() {
 
         <TouchableOpacity
           className="bg-primary py-4 rounded-lg items-center"
-          onPress={() => router.replace('/(tabs)')}
+          onPress={() => router.replace('/screens/splash2')}
         >
           <Text className="text-white font-semibold text-base">Get Started</Text>
         </TouchableOpacity>
