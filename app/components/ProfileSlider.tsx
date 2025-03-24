@@ -12,13 +12,14 @@ interface MenuItemProps {
 function MenuItem({ icon, label, onPress }: MenuItemProps) {
   return (
     <TouchableOpacity 
-      className="flex-row items-center py-4 border-b border-white/10"
+      className="flex-row items-center py-5 border-b border-white/10"
       onPress={onPress}
     >
-      <View className="w-10 h-10 rounded-full bg-white items-center justify-center">
+      <View className="w-12 h-12 rounded-full bg-white items-center justify-center">
         <Image 
           source={icon} 
-          className="w-5 h-5"
+          className="w-6 h-6"
+          resizeMode="contain"
           style={{ tintColor: '#FF6B00' }}
         />
       </View>
@@ -102,13 +103,14 @@ export default function ProfileSlider({ isVisible, onClose }: ProfileSliderProps
 
         {/* Logout Button */}
         <TouchableOpacity 
-          className="flex-row items-center py-4 mt-8"
+          className="flex-row items-center py-5 mt-8"
           onPress={() => {}}
         >
-          <View className="w-10 h-10 rounded-full bg-white items-center justify-center">
+          <View className="w-12 h-12 rounded-full bg-white items-center justify-center">
             <Image 
               source={icons.logout}
-              className="w-5 h-5"
+              className="w-6 h-6"
+              resizeMode="contain"
               style={{ tintColor: '#FF6B00' }}
             />
           </View>
